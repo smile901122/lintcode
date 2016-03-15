@@ -7,7 +7,7 @@ public:
      */
     vector<int> continuousSubarraySum(vector<int>& A) {
         // Write your code here
-        
+        //method 1
         vector<int> res(2);
         int sum = 0;
         int max = INT_MIN;
@@ -31,6 +31,7 @@ public:
         return res;
         
         /*
+        //method 2
         int n = A.size();
         int ll;
         int sum;
