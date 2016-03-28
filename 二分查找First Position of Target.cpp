@@ -14,10 +14,9 @@ public:
         while(start <= end)
         {
             middle = start + (end - start) / 2;
-            if(array[middle] == target && middle >= 0)
+            if(array[middle] == target)
             {
-                --middle;
-                while(array[middle] == target) --middle;
+                while(array[middle] == target && middle >= 0) --middle;
                 return ++middle;
             }
             else if(array[middle] > target) end = middle - 1;
