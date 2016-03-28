@@ -18,11 +18,6 @@ public:
      */
     bool isIdentical(TreeNode* a, TreeNode* b) {
         // Write your code here
-        return isSubtreeIdentical(a, b);
-    }
-private:
-    bool isSubtreeIdentical(TreeNode* a, TreeNode* b)
-    {
         if(a == NULL)
         {
             if(b == NULL)  return true;
@@ -31,7 +26,7 @@ private:
         else if(b != NULL)
         {
             if(a->val == b->val)
-                return isSubtreeIdentical(a->left, b->left) && isSubtreeIdentical(a->right, b->right);
+                return isIdentical(a->left, b->left) && isIdentical(a->right, b->right);
             else return false;
         }
         else return false;
