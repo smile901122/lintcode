@@ -19,15 +19,14 @@ private:
         int i = l + 1;
         int j = r;
         
-        while(1)
+        while(i <= j)
         {
             while(i <= j && a[i] < pivot)   ++i;
             while(i <= j && a[j] > pivot)   --j;
-            if(i < j)
+            if(i <= j)
             {
                 swap(a[i++], a[j--]);
             }
-            else break;
         }
         swap(a[j], a[l]);
         if(j == k)  return a[k];
