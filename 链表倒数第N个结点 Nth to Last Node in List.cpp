@@ -19,7 +19,6 @@ public:
      */
     ListNode *nthToLast(ListNode *head, int n) {
         // write your code here
-        /*
         if(head == NULL)    return head;
         ListNode *p1 = head;
         ListNode *p2 = head;
@@ -34,7 +33,7 @@ public:
             p2 = p2->next;
         }
         return p2;
-        */
+        /*
         ListNode *p1, *p2;
         p1 = head;
         while(n > 0)
@@ -48,6 +47,7 @@ public:
             p2 = p2->next;
         }
         return p2;
+        */
     }
 };
 
