@@ -26,8 +26,8 @@ public:
             {
                 ListNode *temp = p->next;
                 p->next = p->next->next;
-                temp = NULL;
                 delete temp;
+                temp = NULL;
             }
             else
             {
