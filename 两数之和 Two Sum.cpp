@@ -17,7 +17,7 @@ public:
         for(int j = 0; j < nums.size(); ++j)
         {
             gap = target - nums[j];
-            if(map.find(gap) != map.end() && map[gap] > j)
+            if(map.find(gap) != map.end() && map[gap] != j)
             {
                 index.push_back(j + 1);
                 index.push_back(map[gap] + 1);
