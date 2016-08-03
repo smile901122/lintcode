@@ -19,7 +19,7 @@ public:
      */
     TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *A, TreeNode *B) {
         // write your code here
-        /*
+        
         if(root == NULL || root == A || root == B)  return root;
         TreeNode *left = lowestCommonAncestor(root->left, A, B);
         TreeNode *right = lowestCommonAncestor(root->right, A, B);
@@ -27,7 +27,7 @@ public:
         if(left != NULL)    return left;
         else if(right != NULL)   return right;
         else return NULL;
-        */
+        /*
         if ((NULL == A) || (NULL == B)) return NULL;
 
         pair<TreeNode *, int> result = helper(root, A, B);
@@ -57,4 +57,5 @@ private:
         // return either left or right or NULL
         return (NULL != left.first) ? left : right;
     }
+    */
 };
