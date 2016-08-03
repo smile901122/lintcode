@@ -1,6 +1,7 @@
 class Solution {
 public:
     int mySqrt(int x) {
+        //method 1：
        int l = 0;
        int r = x;
        while(l <= r){
@@ -14,5 +15,14 @@ public:
            }
        }
        return --l;
+       //method 2:
+       int l = 0;
+        int r = x;
+        while(l < r){
+            int mid = (l + r + 1) / 2;
+            if(mid > x / mid)   r = mid -1;
+            else l = mid;
+        }
+        return l;
     }
 };
