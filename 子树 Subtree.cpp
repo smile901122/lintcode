@@ -19,7 +19,7 @@ public:
     bool isSubtree(TreeNode *T1, TreeNode *T2) {
         // write your code here
         //注意判断先后的顺序
-        
+        /*
         if(T2 == NULL)  return true;
         if(T1 == NULL)  return false;
         if(isSameTree(T1, T2))  return true;
@@ -43,7 +43,8 @@ private:
         }
         else return false;
     }
-    /*
+    */
+    
     if (sameTree(T1, T2)) {
             return true;
         }
@@ -67,6 +68,15 @@ private:
             return false;
         }
         return sameTree(r1->left, r2->left) && sameTree(r1->right, r2->right);
+    }
+    /*
+        bool isSameTree(TreeNode *t1, TreeNode *t2){
+        bool isNull1 = (t1 == NULL);
+        bool isNull2 = (t2 == NULL);
+        if(isNull1 != isNull2)  return false;
+        if(isNull1 && isNull2)    return true;
+        if(t1->val != t2->val)  return false;
+        return isSameTree(t1->left, t2->left) && isSameTree(t1->right, t2->right);
     }
     */
 };
