@@ -6,7 +6,7 @@ public:
      */
     string longestPalindrome(string &s) {
         string ans = "";
-        int n = s.length();
+        int n = s.size();
         if (n == 0)     return ans;
         
         int maxlen = 0;
