@@ -11,14 +11,13 @@ public:
         int n = A.size();
         
         vector<int> bp(m + 1, 0);
-	    for (int i = 0; i < n; ++i){
-		    for (int j = m; j >= A[i]; j--){
-			    if (bp[j - A[i]] + V[i] > bp[j]){
-				    bp[j] = bp[j - A[i]] + V[i];
-			    }
-		    }
-	    }
-
+        for (int i = 0; i < n; ++i){
+            for (int j = m; j >= A[i]; j--){
+                if (bp[j - A[i]] + V[i] > bp[j]){
+                    bp[j] = bp[j - A[i]] + V[i];
+                }
+            }
+        }
         return bp[m];
     }
 };
